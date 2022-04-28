@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+html,
+body {
+  font-family: 'Poppins', sans-serif;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+}
+app-root {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.font-poppins {
+  font-family: 'Poppins', sans-serif;
+}
+/* @import "~mapbox-gl/dist/mapbox-gl.css";
+@import "~@mapbox/mapbox-gl-geocoder/lib/mapbox-gl-geocoder.css"; */

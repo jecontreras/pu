@@ -1,0 +1,8 @@
+<h6 class="text-white">Add Rock</h6>
+
+<zxing-scanner
+  #scanner
+  (scanSuccess)="scanSuccessHandler($event)"
+></zxing-scanner>
+
+<h6 class="text-white">{{scan}}</h6>

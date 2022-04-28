@@ -1,0 +1,41 @@
+<!-- Firebase Testing -->
+<div class="h-full flex-grow flex flex-col items-center">
+  <h5 class="text-2xl text-white mt-6 max-w-2xl">Rock Collection</h5>
+  <div class="p-6 flex-grow flex flex-col justify-between max-w-4xl w-full">
+    <ul
+      class="overflow-y-scroll rounded-2xl"
+      style="height: calc(100vh - 17rem);"
+    >
+      <!-- Check Items Empty -->
+      <ng-container *ngIf="!items || items.length === 0">
+        <h5 class="text-white opacity-50 mb-6">
+          No Rocks
+        </h5>
+      </ng-container>
+      <!-- Display Items -->
+      <li
+        class="text-white h-32 md:h-20 hover:bg-white hover:bg-opacity-25 rounded-2xl flex items-center mb-2"
+        *ngFor="let item of items"
+      >
+        <img
+          class="object-cover w-32 h-32 md:h-20 md:w-20 rounded-xl mr-6"
+          src="https://www.womensoutdoornews.com/wp-content/uploads/2020/06/Painted-Rock-Strawberry.jpg"
+        />
+        <div class="flex flex-col">
+          <span class="text-3xl md:text-2xl font-bold">{{item.name}}</span>
+          <span
+            class="text-lg md:text-md text-left text-gray-400 font-semibold mt-2"
+            ><i class="fas fa-map-marker-alt mr-2"></i>Texas, US</span
+          >
+        </div>
+      </li>
+    </ul>
+    <button
+      id="register-rock-btn"
+      class="bg-white w-full rounded-lg text-2xl p-3 my-6"
+      routerLink="/create"
+    >
+      <i class="fas fa-plus text-black"></i>
+    </button>
+  </div>
+</div>

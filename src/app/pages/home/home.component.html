@@ -1,0 +1,23 @@
+<!-- QR Code -->
+<div id="app-home" class="items-center mx-8">
+  <div id="qr-code" class="max-w-4xl w-full">
+    <qr-code
+      [value]="qrCodeSrc"
+      size="200"
+      margin="0"
+      darkColor="#ffffff"
+      lightColor="#0000000"
+      errorCorrectionLevel="M"
+    ></qr-code>
+  </div>
+
+  <!-- Tracking Map -->
+  <div id="map" class="flex-grow max-w-4xl w-full my-8">
+    <mgl-map
+      [style]="'mapbox://styles/kesly/ckwpapo6e0mz514mqe1rv8b1d'"
+      [zoom]="[9]"
+      [center]="[-113.391026, 37.125657]"
+    >
+    </mgl-map>
+  </div>
+</div>
